@@ -28,8 +28,8 @@ A simple way to configure access via command line is the following:
 
 b. Install Required Packages:
 
-    With **Docker**: Create a Docker image and build a container using the provided Dockerfile.
-    With pip:
+With **Docker**: Create a Docker image and build a container using the provided Dockerfile.
+With pip:
     ```bash
    cd docker
    pip install -r requierements.txt
@@ -40,12 +40,10 @@ Please refer to [JAX](https://github.com/google/jax#installation) for specific i
 ## Run experiments 🔄
 The experiment configurations are located in scripts/config. To reproduce the results, run.
 To reproduce the results run:
-    ```bash
-   python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4
+    ```python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4
 
 ## Visualize Partial Observability 📊
 To visualize the different partial observability modes in IGDrivSim, open the notebook:
-    ```bash
-    notebook limited_obs.ipynb
+    ```notebook limited_obs.ipynb
 
 
