@@ -44,16 +44,12 @@ The experiment configurations are located in scripts/config. To reproduce the re
 
 To reproduce the results run:
 
-    ```
-    python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4
-    ```
+    ``` python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4```
 
 ## Visualize Partial Observability 📊
 
 To visualize the different partial observability modes in IGDrivSim, open the notebook:
 
-    ```
-    notebook limited_obs.ipynb
-    ```
+    ```notebook limited_obs.ipynb```
 
 
