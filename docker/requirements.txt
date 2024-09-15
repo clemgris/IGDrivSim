@@ -1,0 +1,3 @@
+git+https://github.com/waymo-research/waymax.git@a69f169#egg=waymo-waymax
+distrax
+tf_keras

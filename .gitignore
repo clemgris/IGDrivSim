@@ -1,0 +1,30 @@
+# Debug files
+notebooks/work_in_progress.ipynb
+debug.py
+dataset/data_extract.py
+dataset/PREPROCESSED_WOD_1_1_1
+notebooks/data_analysis.ipynb
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+
+# Logs
+model/logs
+logs
+logs_bc_rl
+
+# Rendering
+animation
+
+# Profile
+name_profile
+stats_sdc_training.pkl

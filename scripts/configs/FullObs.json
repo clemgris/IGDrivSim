@@ -1,0 +1,56 @@
+{
+    "bins": 256,
+    "discrete": true,
+    "dynamics": "delta",
+    "extractor": "ExtractObs",
+    "feature_extractor": "KeyExtractor",
+    "feature_extractor_kwargs": {
+        "final_hidden_layers": 512,
+        "hidden_layers": {
+            "[xyyawv, sdc_speed]": 512,
+            "roadgraph_map": 512
+        },
+        "keys": [
+            "[xyyawv, sdc_speed]",
+            "roadgraph_map"
+        ],
+        "kwargs": {}
+    },
+    "freq_eval": 10,
+    "freq_save": 10,
+    "filter_fun_name": "inter_speed_filter_fun",
+    "filter_fun_args": {
+        "min_mean_speed": 0.7
+    },
+    "GAMMA": 0.99,
+    "GAE_LAMBDA": 0.95,
+    "CLIP_EPS": 0.2,
+    "ENT_COEF": 0.01,
+    "VF_COEF": 0.5,
+    "include_sdc_paths": false,
+    "key": 123,
+    "loss": "logprob",
+    "loss_weight_bc": null,
+    "loss_weight_rl": null,
+    "lr": 2.5e-4,
+    "lr_max": 1e-3,
+    "lr_transition_epoch": 200,
+    "lr_scheduler": "one_cycle_cosine",
+    "max_grad_norm": 0.5,
+    "max_num_obj": 32,
+    "max_num_rg_points": 20000,
+    "num_envs": 256,
+    "num_envs_eval": 128,
+    "num_epochs": 200,
+    "num_steps": 80,
+    "obs_mask": null,
+    "obs_mask_kwargs": null,
+    "optimiser": "adamw",
+    "roadgraph_top_k": 1500,
+    "shuffle_seed": 123,
+    "shuffle_buffer_size": 1000,
+    "num_files": 1000,
+    "training_path": "gs://waymo_open_dataset_motion_v_1_1_0/uncompressed/tf_example/training/training_tfexample.tfrecord@1000",
+    "validation_path": "gs://waymo_open_dataset_motion_v_1_1_0/uncompressed/tf_example/validation/validation_tfexample.tfrecord@150",
+    "should_cache": true
+}
