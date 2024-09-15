@@ -23,7 +23,7 @@ A simple way to configure access via command line is the following:
 - Install gcloud CLI.
 - Run the following commands:
     ```bash
-    gcloud auth login <your_email> with the same email used for step 1.
+    gcloud auth login <your_email> # with the same email used for step 1.
     gcloud auth application-default login
 
 b. Install Required Packages:
@@ -32,9 +32,9 @@ With **Docker**: Create a Docker image and build a container using the provided 
 
 With pip:
     ```bash
-   cd docker
-   pip install -r requierements.txt
-   python -m pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+    cd docker
+    pip install -r requierements.txt
+    python -m pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
 Please refer to [JAX](https://github.com/google/jax#installation) for specific instructions on how to setup JAX with GPU/CUDA support if needed.
 
