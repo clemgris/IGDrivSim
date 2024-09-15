@@ -44,7 +44,7 @@ The experiment configurations are located in scripts/config. To reproduce the re
 
 To reproduce the results run:
    ```bash
-   python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4```
+   python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4
 
 ## Visualize Partial Observability 📊
 
