@@ -35,6 +35,7 @@ With pip:
     cd docker
     pip install -r requierements.txt
     python -m pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+    ```
 
 Please refer to [JAX](https://github.com/google/jax#installation) for specific instructions on how to setup JAX with GPU/CUDA support if needed.
 
@@ -45,11 +46,13 @@ The experiment configurations are located in scripts/config. To reproduce the re
 To reproduce the results run:
     ```bash
     python scripts/train_bc_rl.py -w_bc 1. -w_rl 0. -conf CircularMasking --radius 4
+    ```
 
 ## Visualize Partial Observability 📊
 
 To visualize the different partial observability modes in IGDrivSim, open the notebook:
     ```bash
     notebook limited_obs.ipynb
+    ```
 
 
