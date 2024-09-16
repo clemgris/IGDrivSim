@@ -40,7 +40,7 @@ Please refer to [JAX](https://github.com/google/jax#installation) for specific i
 
 ## Run experiments 🔄
 
-The experiment configurations are located in scripts/config. To reproduce the results, run.
+The experiment configurations are located in scripts/config.
 
 To reproduce the results run:
    ```bash
