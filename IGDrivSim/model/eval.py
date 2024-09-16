@@ -28,8 +28,8 @@ from .feature_extractor import KeyExtractor
 from .state_preprocessing import ExtractObs
 from .rnn_policy import ActorCriticRNN, ScannedRNN
 
-from IGWaymax.dataset import N_TRAINING, N_VALIDATION, TRAJ_LENGTH, N_FILES
-from IGWaymax.obs_mask import (
+from IGDrivSim.dataset import N_TRAINING, N_VALIDATION, TRAJ_LENGTH, N_FILES
+from IGDrivSim.obs_mask import (
     SpeedConicObsMask,
     SpeedGaussianNoise,
     SpeedUniformNoise,
@@ -38,7 +38,7 @@ from IGWaymax.obs_mask import (
     GaussianNoise,
     DistanceObsMask,
 )
-from IGWaymax.utils import (
+from IGDrivSim.utils import (
     plot_observation_with_goal,
     plot_observation_with_heading,
     plot_simulator_state,

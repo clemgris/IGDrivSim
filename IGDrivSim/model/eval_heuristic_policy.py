@@ -8,6 +8,7 @@ import numpy as np
 import json
 from tqdm import tqdm
 from typing import NamedTuple
+import os
 
 from waymax import agents
 from waymax import dynamics
@@ -16,14 +17,14 @@ from waymax import datatypes
 from waymax import env as _env
 from waymax import visualization
 
-from IGWaymax.dataset import N_TRAINING, N_VALIDATION, TRAJ_LENGTH, N_FILES
-from IGWaymax.obs_mask import (
+from IGDrivSim.dataset import N_TRAINING, N_VALIDATION, TRAJ_LENGTH, N_FILES
+from IGDrivSim.obs_mask import (
     SpeedConicObsMask,
     SpeedGaussianNoise,
     SpeedUniformNoise,
     ZeroMask,
 )
-from IGWaymax.utils import (
+from IGDrivSim.utils import (
     plot_observation_with_goal,
     plot_observation_with_heading,
     plot_simulator_state,
@@ -230,8 +231,6 @@ class make_eval_heuristic_policy:
             def _eval_step(cary, rng_extract):
                 current_state, rnn_state, rng = cary
 
-                done = current_state.is_done
-
                 # Extract obs in SDC referential
                 obs = datatypes.sdc_observation_from_state(
                     current_state, roadgraph_top_k=self.config["roadgraph_top_k"]
@@ -333,8 +332,6 @@ class make_eval_heuristic_policy:
 
             def _eval_step_gif(cary, rng_extract):
                 current_state, rnn_state, rng = cary
-
-                done = current_state.is_done
 
                 # Extract obs in SDC referential
                 obs = datatypes.sdc_observation_from_state(
@@ -502,12 +499,13 @@ class make_eval_heuristic_policy:
             }
 
             num_data = {"all": 0, "inter": 0, "hard": 0, "easy": 0}
-
+            t = 0
             for data in tqdm(
                 self.val_dataset.as_numpy_iterator(),
                 desc="Validation",
                 total=N_VALIDATION // self.config["num_envs_eval"] + 1,
             ):
+                t += 1
                 all_scenario_metrics = {}
 
                 scenario = jit_postprocess_fn(data)
@@ -676,7 +674,7 @@ class make_eval_heuristic_policy:
                     if self.config["GIF"]:
                         folder = os.path.join(
                             os.path.join(
-                                f"/data/tucana/cleain/imitation_gap_waymax/animation/",
+                                "/data/tucana/cleain/imitation_gap_waymax/animation/",
                                 self.config["log_folder"][5:],
                                 f"ex_{t}.json",
                             )
