@@ -15,6 +15,7 @@ This repository provides the code and experiments for **IGDrivSim**, a benchmark
    cd IGDrivSim
 
 2. Installation
+
 a. Configure access to Waymo Open Motion Dataset
 
 A simple way to configure access via command line is the following:
