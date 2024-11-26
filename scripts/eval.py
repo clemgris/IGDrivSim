@@ -11,14 +11,14 @@ sys.path.append(".")
 
 from waymax import config as _config
 
-from IGWaymax.utils import (
+from IGDrivSim.utils import (
     tf_examples_dataset,
     preprocess_serialized_womd_data,
     inter_filter_funct,
     speed_filter_funct,
     sub_val_filter_funct,
 )
-from IGWaymax.model import make_eval_heuristic_policy, make_eval
+from IGDrivSim.model import make_eval_heuristic_policy, make_eval
 
 os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
