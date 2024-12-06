@@ -56,9 +56,22 @@ To visualize the different partial observability modes in IGDrivSim, open the no
    ```bash
    notebook limited_obs.ipynb
    ```
+
 ## Acknowledgements 📚
 
 * The utility functions are adapted from the [Waymax](https://github.com/waymo-research/waymax.git) repo.
 * The PPO update implementation is based on [PureJaxRL](https://github.com/luchris429/purejaxrl).
 
+## Citation 🔖
 
+```bibtex
+@misc{grislain2024igdrivsimbenchmarkimitationgap,
+      title={IGDrivSim: A Benchmark for the Imitation Gap in Autonomous Driving},
+      author={Clémence Grislain and Risto Vuorio and Cong Lu and Shimon Whiteson},
+      year={2024},
+      eprint={2411.04653},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2411.04653},
+}
+```
