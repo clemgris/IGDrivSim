@@ -36,7 +36,7 @@ This repository provides the code and experiments for **IGDrivSim**, a benchmark
    - With pip:
       ```bash
       cd docker
-      pip install -r requierements.txt
+      pip install -r requirements.txt
       python -m pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
    Please refer to [JAX](https://github.com/google/jax#installation) for specific instructions on how to setup JAX with GPU/CUDA support if needed.
