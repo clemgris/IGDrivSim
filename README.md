@@ -1,8 +1,8 @@
-# IGDrivSim: A Benchmark for the Imitation Gap in Autonomous Driving 🚗 (IROS, 2025)
+# IGDrivSim: A Benchmark for the Imitation Gap in Autonomous Driving 🚗 
 
 This repository provides the code and experiments for **IGDrivSim**, a benchmark built on top of the [Waymax](https://github.com/waymo-research/waymax.git) simulator, designed to investigate the **imitation gap** in learning autonomous driving policies from human expert demonstrations.
 
-📄 For more details, please refer to our paper: [IGDrivSim: A Benchmark for the Imitation Gap in Autonomous Driving](https://web3.arxiv.org/abs/2411.04653).
+📄 For more details, please refer to our paper: [IGDrivSim: A Benchmark for the Imitation Gap in Autonomous Driving](https://web3.arxiv.org/abs/2411.04653) **(IROS, 2025)**
 
 ## Key Features ✨
 - **Imitation Gap Study**: Examines how discrepancies between human perception and self-driving sensors affect learning.
